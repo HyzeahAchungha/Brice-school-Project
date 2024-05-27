@@ -1,10 +1,13 @@
+import React from 'react';
 import './App.css';
-import Home from './components/home';
+import LoginSignUp from './coms/login & signup/LoginSignUp';
 
 function App() {
   return (
-    <div>
-      <Home/>
+    <div className="App">
+
+      <LoginSignUp/>
+      
     </div>
   );
 }
