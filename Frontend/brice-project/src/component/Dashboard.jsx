@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import "bootstrap-icons/font/bootstrap-icons.css";
 const Dashboard = () => {
     return (
@@ -17,21 +17,18 @@ const Dashboard = () => {
                             </span>
                         </Link>
                         <ul
-                            className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                            id="menu"
-                        >
+                            className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"id="menu">
                             <li className="w-100">
                                 <Link
                                     to="/dashboard"
-                                    className="nav-link text-white px-0 align-middle"
-                                >
+                                    className="nav-link text-white px-0 align-middle">
                                     <i className="fs-4 bi-speedometer2 ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">Dashboard</span>
                                 </Link>
                             </li>
                             <li className="w-100">
                                 <Link
-                                    to="/dashboard/brice"
+                                    to="/dashboard/students"
                                     className="nav-link px-0 align-middle text-white"
                                 >
                                     <i className="fs-4 bi-people ms-2"></i>
@@ -40,10 +37,9 @@ const Dashboard = () => {
                                     </span>
                                 </Link>
                                 <Link
-                                    to="/dashboard/brice"
-                                    className="nav-link px-0 align-middle text-white"
-                                >
-                                    <i className="fs-4 bi-people ms-2"></i>
+                                    to="/dashboard/chat"
+                                    className="nav-link px-0 align-middle text-white" >
+                                    <i className="fs-4 bi-chat ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">
                                         Chat
                                     </span>
@@ -52,32 +48,28 @@ const Dashboard = () => {
                             <li className="w-100">
                                 <Link
                                     to="/dashboard/category"
-                                    className="nav-link px-0 align-middle text-white"
-                                >
+                                    className="nav-link px-0 align-middle text-white">
                                     <i className="fs-4 bi-columns ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">Category</span>
                                 </Link>
                                 <Link
-                                    to="/dashboard/category"
-                                    className="nav-link px-0 align-middle text-white"
-                                >
-                                    <i className="fs-4 bi-columns ms-2"></i>
+                                    to="/dashboard/newsweek"
+                                    className="nav-link px-0 align-middle text-white" >
+                                    <i className="fs-4 bi-book ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">News Week</span>
                                 </Link>
                             </li>
                             <li className="w-100">
                                 <Link
                                     to="/dashboard/profile"
-                                    className="nav-link px-0 align-middle text-white"
-                                >
+                                    className="nav-link px-0 align-middle text-white">
                                     <i className="fs-4 bi-person ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">Profile</span>
                                 </Link>
                             </li>
                             <li className="w-100" >
                                 <Link
-                                    className="nav-link px-0 align-middle text-white"
-                                >
+                                    className="nav-link px-0 align-middle text-white">
                                     <i className="fs-4 bi-power ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">Logout</span>
                                 </Link>
@@ -89,7 +81,7 @@ const Dashboard = () => {
                     <div className="p-2 d-flex justify-content-center shadow">
                         <h4>Student communicate system</h4>
                     </div>
-                    {/* <Outlet /> */}
+                    <Outlet />
                 </div>
             </div>
         </div>
