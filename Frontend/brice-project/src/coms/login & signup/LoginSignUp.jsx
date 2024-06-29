@@ -15,30 +15,31 @@ const LoginSignUp = ()=>{
                 <div className="underline"></div>
             </div>
             <div className="inputs">
-                {action==="Login"?<div></div>:
+                {action==="Login"||action==="Forgot Password"?<div></div>:
                 <div className="input">
                 <img src={user_icon} alt="" />
                 <input type="text" placeholder="Name"/>
             </div>}
             
-        
+            {action==="Forgot Password"?"":
             <div className="input">
                 <img src={mail_icon} alt="" />
                 <input type="email" placeholder="Email"/>
-            </div>
+            </div>}
+            {action==="Forgot Password"?"":
             <div className="input">
                 <img src={password_icon} alt="" />
                 <input type="password" placeholder="Password"/>
-            </div>
+            </div>}
 
-            {action==="Login"?"":
+            {action==="Login"||action==="Forgot Password"?"":
                <div className="input">
                <img src={password_icon} alt="" />
                <input type="password" placeholder="Confirm Password" />
             </div> 
            }
 
-           {action==="Login"?"":
+           {action==="Login"||action==="Forgot Password"?"":
            <div className="input">
            <select name="Choose Department" id="">
                <option value="option">Select Department</option>
@@ -54,7 +55,7 @@ const LoginSignUp = ()=>{
           </div>
            }
 
-           {action==="Login"?"":
+           {action==="Login"||action==="Forgot Password"?"":
            <div className="input">
             <select name="Choose Level" id="">
                 <option value="level">What Level are you?</option>
@@ -66,16 +67,34 @@ const LoginSignUp = ()=>{
             </select>
            </div>
            }
+           {action==="Login"||action==="Sign Up"?"":
+           <div className="input">
+           <img src={password_icon} alt="" />
+           <input type="password" placeholder="Enter New Password"/>
+            </div>
+        }
+         {action==="Login"||action==="Sign Up"?"":
+           <div className="input">
+           <img src={password_icon} alt="" />
+           <input type="password" placeholder="Confirm New Password"/>
+       </div>
+       }
            
             </div>
 
-            {action==="Sign Up"?<div></div>:
-                <div className="account">Forgot your Password?<a className="signuplink"href="#">Click Here</a></div>
+            {action==="Sign Up"||action==="Forgot Password"?<div></div>:
+                <div className="account">Forgot your Password?<a className="signuplink"href="#"onClick={()=>{setaction("Forgot Password")}}>Click Here</a></div>
             }
         
             <div className="submitcontainer">
-                <button className={action==="Login"?"submit gray":"submit"} onClick={()=>{setaction("Sign Up")}}>Sign Up</button>
-                <button className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setaction("Login")}}>Login</button>
+                {action==="Forgot Password"?"":
+                <button className={action==="Login"?"submit gray":"submit"} onClick={()=>{setaction("Sign Up")}}>Sign Up</button>}
+                
+                {action==="Forgot Password"?"":
+                <button className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setaction("Login")}}>Login</button>}
+
+                {action==="Sign Up"||action==="Login"?"":
+                <button className={action==="submit"}>Reset</button>}
             </div>
         </div>
 
