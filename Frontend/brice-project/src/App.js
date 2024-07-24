@@ -10,6 +10,7 @@ import Category from './component/Category';
 import Students from './component/Students';
 import Chats from './component/Chats';
 import Profile from './component/Profile';
+import Readmore from './component/readmore';
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
           <Route path="profile" element={<Profile />}></Route>
           <Route path="newsweek" element={<NewsWeek />}></Route>
           <Route path="category" element={<Category />}></Route>
+          <Route path="readmore" element={<Readmore />}></Route>
           </Route>
-
+         
         </Routes>
 
       </BrowserRouter>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
-import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap-icons/font/bootstrap-icons.json";
+
 const Dashboard = () => {
     return (
         <div className="container-fluid">
