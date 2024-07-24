@@ -2,7 +2,7 @@
 import express from "express";
 import cors from "cors";
 import { adminRouter } from "./Routes/AdminRoutes.js";
-import studentRouter from './Routes/StudentRoute.js';
+// import studentRouter from './Routes/StudentRoute.js';
 
 const app = express();
 app.use(
@@ -14,7 +14,7 @@ app.use(
 );
 app.use(express.json());
 app.use("/auth", adminRouter);
-app.use('/student', studentRouter);
+// app.use('/student', studentRouter);
 app.use(express.static('public'))
 
 
