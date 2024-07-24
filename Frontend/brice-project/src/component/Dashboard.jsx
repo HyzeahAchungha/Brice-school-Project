@@ -1,9 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { Link, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+<<<<<<< HEAD
 import "bootstrap-icons/font/bootstrap-icons.json";
+=======
+import "bootstrap-icons/font/bootstrap-icons.css";
+>>>>>>> d5d26971f71db3ec32c40415a62485b1628a4235
 
 const Dashboard = () => {
+    const navigation=useNavigate()
+    // axios.defaults.withCredentials=true
+    const handelLogout=()=>{
+        axios.get('http://localhost:5000/auth/logout')
+        .then(result=>{
+            if (result.data.Status) {
+               navigation('/adminlogin') 
+            }
+        })
+    }
     return (
         <div className="container-fluid">
             <div className="row flex-nowrap">
@@ -14,7 +29,7 @@ const Dashboard = () => {
                             className="d-flex align-items-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none"
                         >
                             <span className="fs-5 fw-bolder d-none d-sm-inline">
-                                Code With Brice
+                                Admin Dashboard
                             </span>
                         </Link>
                         <ul
@@ -68,7 +83,7 @@ const Dashboard = () => {
                                     <span className="ms-2 d-none d-sm-inline">Profile</span>
                                 </Link>
                             </li>
-                            <li className="w-100" >
+                            <li className="w-100" onClick={handelLogout} >
                                 <Link
                                     className="nav-link px-0 align-middle text-white">
                                     <i className="fs-4 bi-power ms-2"></i>

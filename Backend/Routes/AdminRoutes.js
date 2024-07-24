@@ -5,7 +5,6 @@ import jwt from 'jsonwebtoken'
 
 const router = express.Router();
 
-
 // router.get('/adminlogin')
 router.post('/adminlogin', (req, res) => {
    const sql = "SELECT * FROM admin where email=? and password=?"
