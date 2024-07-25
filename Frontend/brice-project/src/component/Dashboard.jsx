@@ -2,11 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
-<<<<<<< HEAD
 import "bootstrap-icons/font/bootstrap-icons.json";
-=======
-import "bootstrap-icons/font/bootstrap-icons.css";
->>>>>>> d5d26971f71db3ec32c40415a62485b1628a4235
+// import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 const Dashboard = () => {
     const navigation=useNavigate()
