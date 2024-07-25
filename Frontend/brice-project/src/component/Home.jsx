@@ -41,7 +41,9 @@ const Home = () => {
   const departmentCount = () => {
     axios.get("http://localhost:5000/auth/department_count").then((result) => {
       if (result.data.Status) {
-        setDepartmentTotal(result.data.Result[0].department);
+        setDepartmentTotal(result.data.Result[0].departmentOfEmp);
+      }else{
+        alert(result.data.Error)
       }
     });
   };
@@ -113,6 +115,7 @@ const Home = () => {
               </tr>
             ))}
           </tbody>
+        
         </table>
       </div>
     </div>

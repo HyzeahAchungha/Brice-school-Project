@@ -1,9 +1,9 @@
 import mysql from 'mysql';
 
 const con = mysql.createConnection({
-	host: '127.0.0.1',
+	host: 'localhost',
 	user: 'root',
-	password: 'Root1234!',
+	password: '',
 	database: 'brice',
 });
 
