@@ -4,7 +4,12 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import "bootstrap-icons/font/bootstrap-icons.json";
-// import "bootstrap-icons/font/bootstrap-icons.css";
+import { FaRocketchat, FaRegNewspaper } from "react-icons/fa";
+import { BsColumns } from "react-icons/bs";
+import { IoPersonOutline,IoPeople,IoSpeedometerOutline   } from "react-icons/io5";
+import { CiPower } from "react-icons/ci";
+
+
 
 
 
@@ -40,7 +45,7 @@ const Dashboard = () => {
                   to="/dashboard"
                   className="nav-link text-white px-0 align-middle"
                 >
-                  <i className="fs-4 bi-speedometer2 ms-2"></i>
+                  <IoSpeedometerOutline />
                   <span className="ms-2 d-none d-sm-inline">Dashboard</span>
                 </Link>
               </li>
@@ -49,7 +54,7 @@ const Dashboard = () => {
                   to="/dashboard/students"
                   className="nav-link px-0 align-middle text-white"
                 >
-                  <i className="fs-4 bi-people ms-2"></i>
+                  <IoPeople />
                   <span className="ms-2 d-none d-sm-inline">
                     Manage Students
                   </span>
@@ -58,7 +63,7 @@ const Dashboard = () => {
                   to="/dashboard/chat"
                   className="nav-link px-0 align-middle text-white"
                 >
-                  <i className="fs-4 bi-chat ms-2"></i>
+                  <FaRocketchat />
                   <span className="ms-2 d-none d-sm-inline">Chat</span>
                 </Link>
               </li>
@@ -67,14 +72,14 @@ const Dashboard = () => {
                   to="/dashboard/category"
                   className="nav-link px-0 align-middle text-white"
                 >
-                  <i className="fs-4 bi-columns ms-2"></i>
+                  <BsColumns />
                   <span className="ms-2 d-none d-sm-inline">Category</span>
                 </Link>
                 <Link
                   to="/dashboard/newsweek"
                   className="nav-link px-0 align-middle text-white"
                 >
-                  <i className="fs-4 bi-book ms-2"></i>
+               <FaRegNewspaper />
                   <span className="ms-2 d-none d-sm-inline">News Week</span>
                 </Link>
               </li>
@@ -83,13 +88,13 @@ const Dashboard = () => {
                   to="/dashboard/profile"
                   className="nav-link px-0 align-middle text-white"
                 >
-                  <i className="fs-4 bi-person ms-2"></i>
+                <IoPersonOutline />
                   <span className="ms-2 d-none d-sm-inline">Profile</span>
                 </Link>
               </li>
               <li className="w-100" onClick={handelLogout}>
                 <Link className="nav-link px-0 align-middle text-white">
-                  <i className="fs-4 bi-power ms-2"></i>
+                <CiPower />
                   <span className="ms-2 d-none d-sm-inline">Logout</span>
                 </Link>
               </li>

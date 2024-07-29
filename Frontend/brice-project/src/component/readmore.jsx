@@ -6,7 +6,7 @@ const Readmore= ()=>{
     return(
         <div>
             <div className="image-banner">
-                <img src={H5} alt=""  className="img-fluid" />
+                <img src={H5} alt=""  className="img-fluid c-img" />
             <div className="banner-content">
                 <h1>HUIB School of Business: We Prepare You for What the World Offers Next</h1>
            
@@ -49,12 +49,8 @@ const Readmore= ()=>{
 
             <div className="container-fluid mt-3 mb-3 contact">
                 <div className="row">
-                <div className="col-12 col-md-6 col-lg-4">
-                <div className="left-text">
-                <h1>Leave A Comment</h1>
-                <p className="text-muted">Leave a message or a recommendation for the administration for future improvements or adjustment of the programe
-                </p>
-            </div>
+                <div className="col-16 ">
+                
 
             <div className="col-8 ">
           <form action="" className="contact-form">
@@ -85,6 +81,8 @@ const Readmore= ()=>{
         </div>
 
         </div></div></div>
+
+        
         
         </div>
     )
